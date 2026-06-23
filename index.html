@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="ClickPet — Telegram 宠物养成小游戏">
+  <title>ClickPet — 点宠养成</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Status Bar -->
+    <div id="status-bar">
+      <span id="hearts-display">❤️ 0</span>
+      <span id="combo-display">⚡连击 x1</span>
+    </div>
+
+    <!-- Pet Click Area -->
+    <div id="pet-area" onclick="handlePetClick(event)">
+      <div id="float-container"></div>
+      <div id="pet-emoji">🐱</div>
+      <div id="pet-name">猫咪系</div>
+      <div id="pet-stage">🥚 蛋蛋</div>
+      <div id="pet-level">Lv.1</div>
+    </div>
+
+    <!-- Exp Bar -->
+    <div id="exp-container">
+      <div id="exp-bar-bg"><div id="exp-bar"></div></div>
+      <div id="exp-text">0/5 ❤️</div>
+    </div>
+
+    <!-- Stage Line -->
+    <div id="stage-line"></div>
+
+    <!-- Pet Tabs -->
+    <div id="pet-tabs"></div>
+    <!-- Ad Button -->
+    <button id="ad-btn" onclick="showAd()">💰 领取 500 爱心</button>
+  </div>
+
+  <!-- Stats Button -->
+  <button id="stats-btn" onclick="showStats()">📊</button>
+
+  <!-- Toast -->
+  <div id="toast"></div>
+
+  <!-- Evolution Overlay -->
+  <div id="evolve-overlay">
+    <div id="evolve-emoji"></div>
+    <div id="evolve-name"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/pets.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/tg.js"></script>
+  <script src="js/ads.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      init();
+    });
+  </script>
+</body>
+</html>
