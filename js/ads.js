@@ -1,6 +1,6 @@
 ﻿// ===== ClickPet — Adsgram Ad Module =====
 
-var ADSGRAM_BLOCK_ID = "36057"; // replace with your own from partner.adsgram.ai
+var ADSGRAM_BLOCK_ID = "36060"; // replace with your own from partner.adsgram.ai
 var adController = null;
 
 function initAds() {
